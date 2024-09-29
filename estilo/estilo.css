@@ -1,0 +1,20 @@
+/* Yeray Rodriguez Granda UO284247*/
+/*Para el cuerpo de la página, tipo de letra, color de fondo y color de letra*/
+body {
+	font-family: tahoma;
+	background-color:#EAEFF2;
+	color: #190204;
+}
+/* Para el encabezado color de fondo y de letra*/
+header {
+    background-color: #FF3D33;
+	color: #FFFFFF;
+}
+/* Para los primeros títulos*/
+h1{
+    color: #FFFFFF; 
+}
+/*  El color de letra del menu*/
+nav {
+    color: #FFFFFF;
+}
