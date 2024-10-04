@@ -1,27 +1,41 @@
 /* Yeray Rodriguez Granda UO284247*/
 /*Para el cuerpo de la página, tipo de letra, color de fondo y color de letra*/
 body {
-	font-family: tahoma;
+	font-family: tahoma, sans-serif;
 	background-color:#FFFFFF;
 	color: #000000;
 }
 /* Para el encabezado color de fondo y de letra*/
 header {
-    	background-color: #E10600;
+    background-color: #B30600;
 	color: #FFFFFF;
 }
 /*  El color de letra del menu*/
 header nav a {
-    	color: #FFFFFF;
+    color: #FFFFFF; /* Color de fondo */
 	font-size: 18px;
+	text-decoration: none;
+}
+header h1 a{
+	text-decoration: none;
+	color: #FFFFFF;
 }
 /* Para los primeros títulos*/
-h1{
-    	color: #FFFFFF; 
+h1 {
+    color: #FFFFFF; 
+}
+/*Para los segundos titulos*/
+h2 {
+	color: #FFFFFF; 
+	background-color: #B30600; 
 }
 /* Estilo general para el video */
 section video {
-    	width: 100%; 
-    	max-width: 600px; 
-    	height: auto; 
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+}
+/* Cambiar color al pasar el ratón */
+header a:hover {
+    background-color: #850400; /* Color de fondo al pasar el ratón */
 }
