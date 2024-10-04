@@ -10,13 +10,13 @@ header {
     background-color: #FF3D33;
 	color: #FFFFFF;
 }
-/* Para los primeros títulos*/
-h1{
-    color: #FFFFFF; 
-}
 /*  El color de letra del menu*/
 header nav a{
     color: #FFFFFF; /* Color de fondo */
+}
+/* Para los primeros títulos*/
+h1{
+    color: #FFFFFF; 
 }
 /* Estilo general para el video */
 section video {
