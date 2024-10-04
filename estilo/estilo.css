@@ -8,12 +8,12 @@ body {
 /* Para el encabezado color de fondo y de letra*/
 header {
     background-color: #FF3D33;
-	color: #FFFFFF;
+    color: #FFFFFF;
 }
 /*  El color de letra del menu*/
 header nav a {
     color: #FFFFFF; /* Color de fondo */
-	font-size: 18px;
+    font-size: 18px;
 }
 /* Para los primeros títulos*/
 h1{
