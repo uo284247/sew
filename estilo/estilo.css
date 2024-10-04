@@ -15,6 +15,12 @@ h1{
     color: #FFFFFF; 
 }
 /*  El color de letra del menu*/
-nav {
-    color: #FFFFFF;
+header nav a{
+    color: #FFFFFF; /* Color de fondo */
+}
+/* Estilo general para el video */
+section video {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
 }
