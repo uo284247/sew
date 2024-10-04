@@ -7,21 +7,21 @@ body {
 }
 /* Para el encabezado color de fondo y de letra*/
 header {
-    background-color: #E10600;
+    	background-color: #E10600;
 	color: #FFFFFF;
 }
 /*  El color de letra del menu*/
 header nav a {
-    color: #FFFFFF; /* Color de fondo */
+    	color: #FFFFFF;
 	font-size: 18px;
 }
 /* Para los primeros títulos*/
 h1{
-    color: #FFFFFF; 
+    	color: #FFFFFF; 
 }
 /* Estilo general para el video */
 section video {
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
+    	width: 100%; 
+    	max-width: 600px; 
+    	height: auto; 
 }
