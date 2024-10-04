@@ -11,8 +11,9 @@ header {
 	color: #FFFFFF;
 }
 /*  El color de letra del menu*/
-header nav a{
+header nav a {
     color: #FFFFFF; /* Color de fondo */
+	font-size: 18px;
 }
 /* Para los primeros títulos*/
 h1{
