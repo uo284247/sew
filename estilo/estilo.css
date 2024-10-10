@@ -1,41 +1,114 @@
 /* Yeray Rodriguez Granda UO284247*/
 /*Para el cuerpo de la página, tipo de letra, color de fondo y color de letra*/
+/*Especificidad: 001*/
 body {
 	font-family: tahoma, sans-serif;
 	background-color:#FFFFFF;
 	color: #000000;
 }
 /* Para el encabezado color de fondo y de letra*/
+/*Especificidad: 001*/
 header {
-    background-color: #B30600;
+    background-color: #850400;
 	color: #FFFFFF;
 }
 /*  El color de letra del menu*/
+/*Especificidad: 003*/
 header nav a {
     color: #FFFFFF; /* Color de fondo */
 	font-size: 18px;
 	text-decoration: none;
 }
+/*Especificidad: 003*/
 header h1 a{
 	text-decoration: none;
 	color: #FFFFFF;
 }
 /* Para los primeros títulos*/
+/*Especificidad: 001*/
 h1 {
     color: #FFFFFF; 
 }
 /*Para los segundos titulos*/
+/*Especificidad: 001*/
 h2 {
 	color: #FFFFFF; 
-	background-color: #B30600; 
-}
-/* Estilo general para el video */
-section video {
-    width: 100%; 
-    max-width: 600px; 
-    height: auto; 
+	background-color: #850400; 
 }
 /* Cambiar color al pasar el ratón */
+/*Especificidad: 012*/
 header a:hover {
     background-color: #850400; /* Color de fondo al pasar el ratón */
+}
+/* Destacar la clase .destacado */
+/*Especificidad: 010*/
+.destacado {
+    font-weight: bold;
+}
+
+/* Estilo de viñeta cuadrado y mas tamaño */
+/* especificidad 001*/
+ul {
+	list-style-type: square;
+}
+/* Color a las viñetas */
+/* Especificidad 003*/
+ul li::marker{
+	color: #850400; font-weight:bold; 
+}
+/* Color a la lista ordenada */
+/* Especificidad 003*/
+ol li::marker{
+	color: #850400; font-weight:bold; 
+}
+/*Color a los términos a definar, mayor tamaño y padding */
+/*Especificidad 001*/
+dt {
+	color: #850400;
+    font-size: 18px; /* Tamaño del texto del término */
+    padding: 5px;
+}
+/*Especificidad 002*/
+dt::before {
+	content: "⚙ "; /* Añadir un icono antes de cada término */
+}
+/*Especificidad 001*/
+dd {
+    background-color: #e0f7fa; /* Fondo diferente para las definiciones */
+    font-size: 16px; /* Tamaño del texto de la definición */
+    margin-left: 20px; 
+    padding: 5px;
+    border-left: 3px solid #850400; /* Añadir una línea decorativa a la izquierda */
+	margin-bottom: 15px; /* Añadir un espacio debajo de cada definición */
+}
+/*Especificidad 001*/
+table{
+	width: 30%; /* Hace que la tabla ocupe todo el ancho disponible */
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+    margin: 20px 0; /* Añade espacio arriba y abajo */
+    font-size: 16px;
+    text-align: left;
+    background-color: #f5f5f5;
+}
+/*Especificidad 001*/
+th {
+    background-color: #2c3e50; /* Fondo oscuro para los encabezados */
+    color: white; /* Texto blanco para que contraste */
+    padding: 10px 15px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+/*Especificidad 001*/
+td {
+    padding: 10px 15px;
+    border: 1px solid #ddd; /* Bordes finos para cada celda */
+}
+/*Especificidad 010*/
+.center{
+	text-align: center;
+}
+/*Especificidad 001*/
+video, img {
+    max-width: 100%;
+    height: auto;
 }
