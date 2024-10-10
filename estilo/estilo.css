@@ -117,3 +117,7 @@ video, img {
     max-width: 100%;
     height: auto;
 }
+/*Especificidad 001*/
+a {
+    font-size: 18px;
+}
