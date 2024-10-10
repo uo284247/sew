@@ -10,17 +10,18 @@
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" /> 
     <title>Piloto</title>
 	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" /> 
+	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
 	<link rel="icon" href="multimedia/imagenes/icon.ico" />
 </head>
 
 <body>
     <!-- Datos con el contenidos que aparece en el navegador -->
 	<header>
-		<h1>F1 Desktop</h1>
+		<h1><a href="index.html">F1 Desktop</a></h1>
 		<nav>
 			<a href="index.html">Inicio</a>
-			<a href="piloto.html">Piloto</a>
-			<a href="noticias.html">Noticia</a>
+			<a href="piloto.html" class="active">Piloto</a>
+			<a href="noticias.html">Noticias</a>
 			<a href="calendario.html">Calendario</a>
 			<a href="meteorologia.html">Meteorología</a>
 			<a href="circuito.html">Circuito</a>
@@ -28,25 +29,24 @@
 			<a href="juegos.html">Juegos</a>
 		</nav>
 	</header>
+	<p>Estás en: <a href="index.html">Inicio</a> >> Piloto</p>
 	<main>
 		<section>
-			<header>
-				<h2>Charles Leclerc</h2>
-			</header>
+			<h2>Charles Leclerc</h2>
 			
-			<h3>Nombre y apellidos</h3>
-			<p>Charles Marc Hervé Perceval Leclerc.</p> <!-- Añadido punto para consistencia -->
-			
-			<h3>Dorsal</h3>
-			<p>Número 16.</p> <!-- Añadido punto para consistencia -->
-			
-			<h3>Fecha de nacimiento</h3>
-			<p>Nació el 16 de octubre de 1997.</p> <!-- Añadido punto para consistencia -->
-			
-			<h3>Lugar de nacimiento</h3>
-			<p>Nacido en Montecarlo, Mónaco.</p> <!-- Añadido punto para consistencia -->
-			
-			<h3>Lugar de residencia</h3>
+			<p class="destacado">Nombre y apellidos</p>
+			<p>Charles Marc Hervé Perceval Leclerc.</p>
+
+			<p class="destacado">Dorsal</p>
+			<p>Número 16.</p>
+
+			<p class="destacado">Fecha de nacimiento</p>
+			<p>Nació el 16 de octubre de 1997.</p>
+
+			<p class="destacado">Lugar de nacimiento</p>
+			<p>Nacido en Montecarlo, Mónaco.</p>
+
+			<p class="destacado">Lugar de residencia</p>
 			<p>En su ciudad natal, Montecarlo.</p> <!-- Añadido punto para consistencia -->
 			
 			<picture>
@@ -58,9 +58,7 @@
 		</section>
 
 		<article>
-		  <header>
 			<h2>Presentación</h2>
-		  </header>
 		  
 		  <section>
 			<h3>Introducción</h3>
@@ -91,9 +89,7 @@
 		  </section>
 		</article>
 		<section>
-			<header>
-				<h2>Curiosidades</h2>
-			</header>
+			<h2>Curiosidades</h2>
 			<h3>Aficiones</h3>
 			<ul>
 				<li>Música
@@ -151,37 +147,35 @@
 			</ul>
 			<h3>Resultados</h3>
 			<table>
-				<caption>Información</caption>
 				<tr>
 					<th scope="col" id="categoria" >Categoría</th>
-					<th scope="col" id="resultado" >Resultado</th>
+					<th scope="col" id="resultado" class="center">Resultado</th>
 				</tr>
 				<tr>
 					<th scope="row" id="puntos" >Puntos</th>
-					<td headers="puntos resultado" >284</td>
+					<td headers="puntos resultado"  class="center">284</td>
 				</tr>
 				<tr>
 					<th scope="row" id="posicion" >Posición</th>
-					<td headers="posicion resultado">4</td>
+					<td headers="posicion resultado"  class="center">4</td>
 				</tr>
 				<tr>
 					<th scope="row" id="poles" >Poles</th>
-					<td headers="poles resultado" >3</td>
+					<td headers="poles resultado"  class="center">3</td>
 				</tr>
 				<tr>
 					<th scope="row" id="victorias">Victorias</th>
-					<td headers="victorias resultado" >1</td>
+					<td headers="victorias resultado"  class="center">1</td>
 				</tr>
 				<tr>
 					<th scope="row" id="podios" >Podios</th>
-					<td headers="podios resultado" >7</td>
+					<td headers="podios resultado"  class="center">7</td>
 				</tr>
 			</table>
 		</section>
 		<section>
-			<header>
-				<h2>Victoria en Mónaco</h2>
-			</header>
+			<h2>Victoria en Mónaco</h2>
+		
 			<p>Celebración de Leclerc después de salir campeón en su país</p>
 			<video controls preload="auto">
 				<source src="multimedia/videos/cl.mp4">	
@@ -189,9 +183,8 @@
 			</video>
 		</section>
 		<section>
-			<header>
-				<h2>Escucha el Ferrari</h2>
-			</header>
+			<h2>Escucha el Ferrari</h2>
+			
 			<p>Audio del Ferrari de Charles Leclerc en Mónaco</p>
 			<audio controls>
 				<source src="multimedia/audios/cl.mp3">
