@@ -1,0 +1,38 @@
+/* layout.css */
+/* Estilos para el encabezado */
+/* Especificidad 001*/
+header {
+    padding: 20px; /* Espaciado interno */
+    background-color: #850400; /* Color de fondo */
+    border-bottom: 1px solid #ddd; /* Línea inferior */
+}
+/* Estilos para el título */
+/* Especificidad 002*/
+header h1 {
+    font-size: 2em; /* Tamaño de la fuente */
+    margin: 0; /* Sin margen */
+}
+/* Estilos para la navegación */
+/* Especificidad 002*/
+header nav {
+    display: flex; /* Usamos flexbox en nav para alinear los enlaces */
+    justify-content: center; /* Centrar los enlaces */
+    margin-top: 5px; /* Espacio entre el h1 y el nav */
+}
+/* Especificidad 003*/
+header nav a {
+    margin: 0 15px; /* Espacio entre enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+/* Especificidad 013*/
+header nav a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+}
+/* Estilo para el elemento activo del menú */
+/* Especificidad 013*/
+header nav a.active {
+    color: #FFD700; /* Color dorado para el elemento activo, destaca bien sobre el fondo oscuro */
+    font-weight: bold; /* Resaltar el texto */
+    border-bottom: 2px solid #FFD700; /* Añadir un borde inferior para mayor énfasis */
+}
+
