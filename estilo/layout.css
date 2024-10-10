@@ -4,6 +4,7 @@
 header {
     padding: 20px; /* Espaciado interno */
     background-color: #850400; /* Color de fondo */
+    color:white;
     border-bottom: 1px solid #ddd; /* Línea inferior */
 }
 /* Estilos para el título */
@@ -32,6 +33,7 @@ header nav a:hover {
 /* Especificidad 013*/
 header nav a.active {
     color: #FFD700; /* Color dorado para el elemento activo, destaca bien sobre el fondo oscuro */
+    background-color: #850400;
     font-weight: bold; /* Resaltar el texto */
     border-bottom: 2px solid #FFD700; /* Añadir un borde inferior para mayor énfasis */
 }
