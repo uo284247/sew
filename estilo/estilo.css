@@ -117,7 +117,8 @@ video, img {
     max-width: 100%;
     height: auto;
 }
-/*Especificidad 001*/
-a {
-    font-size: 18px;
+/*Especificidad 003*/
+ul li a {
+    display: block; /* Esto hace que cada enlace ocupe todo el ancho del `li` */
+    margin-bottom: 10px; /* Ajusta la separación entre los enlaces */
 }
