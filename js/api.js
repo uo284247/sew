@@ -52,9 +52,10 @@ class Api {
                 isFading = true;
     
                 // Cancelar valores previos y ejecutar fade-in
-                fadeIn(3, () => {
+                fadeIn(3).then(() => {
                     isFading = false;
-                    executePendingAction(); // Ejecutar cualquier acción pendiente
+                    // Ejecutar la acción pendiente, si la hubiera
+                    executePendingAction();
                 });
                 audio.play();
     
@@ -78,11 +79,12 @@ class Api {
                 isFading = true;
     
                 // Cancelar valores previos y ejecutar fade-out
-                fadeOut(3, () => {
+                fadeOut(3).then(() => {
                     isFading = false;
                     audio.pause();
                     audio.currentTime = 0; // Reiniciar al inicio
-                    executePendingAction(); // Ejecutar cualquier acción pendiente
+                    // Ejecutar la acción pendiente, si la hubiera
+                    executePendingAction();
                 });
     
                 // Deshabilitar botones correspondientes
@@ -96,39 +98,43 @@ class Api {
         });
     
         // Función para el efecto de fade-in
-        function fadeIn(duration = 3, callback) {
-            const currentTime = audioContext.currentTime;
-            gainNode.gain.cancelScheduledValues(currentTime); // Cancelar valores previos
-            gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime); // Configurar valor actual
-            gainNode.gain.linearRampToValueAtTime(1, currentTime + duration); // Subir volumen a 1
+        function fadeIn(duration = 3) {
+            return new Promise((resolve) => {
+                const currentTime = audioContext.currentTime;
+                gainNode.gain.cancelScheduledValues(currentTime); // Cancelar valores previos
+                gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime); // Configurar valor actual
+                gainNode.gain.linearRampToValueAtTime(1, currentTime + duration); // Subir volumen a 1
     
-            // Llamar al callback después del fade-in
-            setTimeout(() => {
-                if (callback) callback();
-            }, duration * 1000);
+                // Resolvemos la promesa después del fade-in
+                setTimeout(() => {
+                    resolve();
+                }, duration * 1000);
+            });
         }
     
         // Función para el efecto de fade-out
-        function fadeOut(duration = 3, callback) {
-            const currentTime = audioContext.currentTime;
-            gainNode.gain.cancelScheduledValues(currentTime); // Cancelar valores previos
-            gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime); // Configurar valor actual
-            gainNode.gain.linearRampToValueAtTime(0, currentTime + duration); // Bajar volumen a 0
+        function fadeOut(duration = 3) {
+            return new Promise((resolve) => {
+                const currentTime = audioContext.currentTime;
+                gainNode.gain.cancelScheduledValues(currentTime); // Cancelar valores previos
+                gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime); // Configurar valor actual
+                gainNode.gain.linearRampToValueAtTime(0, currentTime + duration); // Bajar volumen a 0
     
-            // Llamar al callback después del fade-out
-            setTimeout(() => {
-                if (callback) callback();
-            }, duration * 1000);
+                // Resolvemos la promesa después del fade-out
+                setTimeout(() => {
+                    resolve();
+                }, duration * 1000);
+            });
         }
     
         // Función para ejecutar acciones pendientes
         function executePendingAction() {
             if (pendingAction === "play") {
-                playButton.click();
+                playButton.click();  // Ejecuta play cuando el fade termine
             } else if (pendingAction === "stop") {
-                stopButton.click();
+                stopButton.click();  // Ejecuta stop cuando el fade termine
             }
-            pendingAction = null; // Limpiar acción pendiente
+            pendingAction = null;  // Limpiar acción pendiente
         }
     
         // Manejo básico de errores
@@ -139,6 +145,7 @@ class Api {
         });
     }
     
+
 }
 
 const archivosDeAudio = [
