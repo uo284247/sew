@@ -38,8 +38,9 @@ class Api {
         gainNode.gain.setValueAtTime(0, audioContext.currentTime); // Volumen inicial en 0
         track.connect(gainNode).connect(audioContext.destination);
     
-        // Estado para evitar conflictos entre fades
+        // Estado para evitar conflictos entre fades y almacenar acciones pendientes
         let isFading = false;
+        let pendingAction = null;
     
         // Evento para botón de reproducción
         playButton.addEventListener("click", () => {
@@ -53,12 +54,17 @@ class Api {
                 // Cancelar valores previos y ejecutar fade-in
                 fadeIn(3, () => {
                     isFading = false;
+                    executePendingAction(); // Ejecutar cualquier acción pendiente
                 });
                 audio.play();
     
                 // Deshabilitar botones correspondientes
                 playButton.disabled = true;
                 stopButton.disabled = false;
+            } else {
+                // Almacenar la acción como pendiente
+                pendingAction = "play";
+                playButton.disabled = true;
             }
         });
     
@@ -76,11 +82,16 @@ class Api {
                     isFading = false;
                     audio.pause();
                     audio.currentTime = 0; // Reiniciar al inicio
+                    executePendingAction(); // Ejecutar cualquier acción pendiente
                 });
     
                 // Deshabilitar botones correspondientes
                 stopButton.disabled = true;
                 playButton.disabled = false;
+            } else {
+                // Almacenar la acción como pendiente
+                pendingAction = "stop";
+                stopButton.disabled = true;
             }
         });
     
@@ -110,6 +121,16 @@ class Api {
             }, duration * 1000);
         }
     
+        // Función para ejecutar acciones pendientes
+        function executePendingAction() {
+            if (pendingAction === "play") {
+                playButton.click();
+            } else if (pendingAction === "stop") {
+                stopButton.click();
+            }
+            pendingAction = null; // Limpiar acción pendiente
+        }
+    
         // Manejo básico de errores
         audio.addEventListener('error', (e) => {
             console.error('Error al cargar o reproducir el audio:', e);
@@ -117,8 +138,7 @@ class Api {
             stopButton.disabled = true;
         });
     }
-        
-
+    
 }
 
 const archivosDeAudio = [
