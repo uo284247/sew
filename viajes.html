@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Yeray Rodriguez Granda" /> 
+    <meta name="description" content="Información sobre los diferentes destinos turísticos en los que se desarrolla la F1" /> 
+    <meta name="keywords" content="F1, Miami, Las Vegas, Reino Unido, España, India" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Viajes</title>
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" /> 
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+    <link rel="icon" href="multimedia/imagenes/icon.ico" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/viaje.js"></script>
+    <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&amp"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">F1 Desktop</a></h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="piloto.html">Piloto</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="calendario.html">Calendario</a>
+            <a href="meteorologia.html">Meteorología</a>
+            <a href="circuito.html">Circuito</a>
+            <a href="viajes.html" class="active">Viajes</a>
+            <a href="juegos.html">Juegos</a>
+        </nav>
+    </header>
+    <p>Estás en: <a href="index.html">Inicio</a> >> Viajes</p>
+    <h2>Destinos</h2>
+    <section>
+        <h3>Cargar mapa estático</h3>
+        <input type="button" value="Obtener mapa estático" onclick="viajes.getMapaEstaticoGoogle()">
+        <h3>Cargar mapa dinámico</h3>
+        <input type="button" value="Obtener mapa dinámico" onclick="viajes.mapaDinamico()">
+    </section>
+</body>
+</html>
