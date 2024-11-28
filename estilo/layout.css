@@ -1,0 +1,57 @@
+/* layout.css */
+/* Estilos para el encabezado */
+/* Especificidad 001*/
+header {
+    padding: 1.25rem; /* Espaciado interno */
+    background-color: #850400; /* Color de fondo */
+    color: white;
+    border-bottom: 0.063rem solid #ddd; /* Línea inferior */
+}
+
+/* Estilos para el título */
+/* Especificidad 002*/
+header h1 {
+    font-size: 2rem; /* Tamaño de la fuente */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilos para la navegación */
+/* Especificidad 002*/
+header nav {
+    display: flex; /* Usamos flexbox en nav para alinear los enlaces */
+    justify-content: center; /* Centrar los enlaces */
+    margin-top: 0.313rem; /* Espacio entre el h1 y el nav */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: flex; /* Usamos flexbox en nav para alinear los enlaces */
+        justify-content: center; /* Centrar los enlaces */
+        margin-top: 0.313rem; /* Espacio entre el h1 y el nav */
+        flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+    }
+}
+
+/* Especificidad 003*/
+header nav a {
+    margin: 0 1rem; /* Espacio entre enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Especificidad 013*/
+header nav a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+    color: white;
+    background-color: #850400;
+}
+
+/* Estilo para el elemento activo del menú */
+/* Especificidad 013*/
+header nav a.active {
+    color: #FFD700; /* Color dorado para el elemento activo, destaca bien sobre el fondo oscuro */
+    background-color: #850400;
+    font-weight: bold; /* Resaltar el texto */
+    border-bottom: 0.125rem solid #FFD700; /* Añadir un borde inferior para mayor énfasis */
+}
+
