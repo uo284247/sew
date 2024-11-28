@@ -78,7 +78,7 @@ class Api {
             if (!isFading) {
                 isFading = true;
     
-                // Cancelar valores previos y ejecutar fade-out
+                // Cancelar cualquier fade anterior y ejecutar fade-out
                 fadeOut(3).then(() => {
                     isFading = false;
                     audio.pause();
@@ -144,6 +144,7 @@ class Api {
             stopButton.disabled = true;
         });
     }
+    
     
 
 }
