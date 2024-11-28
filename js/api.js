@@ -47,11 +47,7 @@ class Api {
             if (audioContext.state === 'suspended') {
                 audioContext.resume();
             }
-                fadeIn(3).then(() => {
-                    isFading = false;
-                    // Ejecutar la acción pendiente, si la hubiera
-                    executePendingAction();
-                });
+                fadeIn(3);
                 audio.play();
     
                 // Deshabilitar botones correspondientes
@@ -71,28 +67,23 @@ class Api {
                     isFading = false;
                     audio.pause();
                     audio.currentTime = 0; // Reiniciar al inicio
-                    // Ejecutar la acción pendiente, si la hubiera
+                    playButton.disabled = false;
                 });
     
                 // Deshabilitar botones correspondientes
                 stopButton.disabled = true;
-                playButton.disabled = false;
             
         });
     
         // Función para el efecto de fade-in
         function fadeIn(duration = 3) {
-            return new Promise((resolve) => {
-                const currentTime = audioContext.currentTime;
-                gainNode.gain.cancelScheduledValues(currentTime); // Cancelar valores previos
-                gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime); // Configurar valor actual
-                gainNode.gain.linearRampToValueAtTime(1, currentTime + duration); // Subir volumen a 1
-    
-                // Resolvemos la promesa después del fade-in
-                setTimeout(() => {
-                    resolve();
-                }, duration * 1000);
-            });
+            const currentTime = audioContext.currentTime;
+            gainNode.gain.cancelScheduledValues(currentTime); // Cancelar valores previos
+            gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime); // Configurar valor actual
+            gainNode.gain.linearRampToValueAtTime(1, currentTime + duration); // Subir volumen a 1
+            setTimeout(() => {
+                resolve();
+            }, duration * 1000);
         }
     
         // Función para el efecto de fade-out
