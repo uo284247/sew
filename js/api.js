@@ -47,11 +47,6 @@ class Api {
             if (audioContext.state === 'suspended') {
                 audioContext.resume();
             }
-    
-            if (!isFading) {
-                isFading = true;
-    
-                // Cancelar valores previos y ejecutar fade-in
                 fadeIn(3).then(() => {
                     isFading = false;
                     // Ejecutar la acción pendiente, si la hubiera
@@ -62,11 +57,6 @@ class Api {
                 // Deshabilitar botones correspondientes
                 playButton.disabled = true;
                 stopButton.disabled = false;
-            } else {
-                // Almacenar la acción como pendiente
-                pendingAction = "play";
-                playButton.disabled = true;
-            }
         });
     
         // Evento para botón de stop
@@ -75,8 +65,6 @@ class Api {
                 audioContext.resume();
             }
     
-            if (!isFading) {
-                isFading = true;
     
                 // Cancelar cualquier fade anterior y ejecutar fade-out
                 fadeOut(3).then(() => {
@@ -84,17 +72,12 @@ class Api {
                     audio.pause();
                     audio.currentTime = 0; // Reiniciar al inicio
                     // Ejecutar la acción pendiente, si la hubiera
-                    executePendingAction();
                 });
     
                 // Deshabilitar botones correspondientes
                 stopButton.disabled = true;
                 playButton.disabled = false;
-            } else {
-                // Almacenar la acción como pendiente
-                pendingAction = "stop";
-                stopButton.disabled = true;
-            }
+            
         });
     
         // Función para el efecto de fade-in
@@ -127,15 +110,6 @@ class Api {
             });
         }
     
-        // Función para ejecutar acciones pendientes
-        function executePendingAction() {
-            if (pendingAction === "play") {
-                playButton.click();  // Ejecuta play cuando el fade termine
-            } else if (pendingAction === "stop") {
-                stopButton.click();  // Ejecuta stop cuando el fade termine
-            }
-            pendingAction = null;  // Limpiar acción pendiente
-        }
     
         // Manejo básico de errores
         audio.addEventListener('error', (e) => {
