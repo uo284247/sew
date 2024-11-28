@@ -38,19 +38,28 @@ class Api {
         gainNode.gain.setValueAtTime(0, audioContext.currentTime); // Volumen inicial en 0
         track.connect(gainNode).connect(audioContext.destination);
     
+        // Estado para evitar conflictos entre fades
+        let isFading = false;
+    
         // Evento para botón de reproducción
         playButton.addEventListener("click", () => {
             if (audioContext.state === 'suspended') {
                 audioContext.resume();
             }
     
-            // Reproducir el audio con fade-in
-            fadeIn(3);
-            audio.play();
+            if (!isFading) {
+                isFading = true;
     
-            // Deshabilitar botones correspondientes
-            playButton.disabled = true;
-            stopButton.disabled = false;
+                // Cancelar valores previos y ejecutar fade-in
+                fadeIn(3, () => {
+                    isFading = false;
+                });
+                audio.play();
+    
+                // Deshabilitar botones correspondientes
+                playButton.disabled = true;
+                stopButton.disabled = false;
+            }
         });
     
         // Evento para botón de stop
@@ -59,31 +68,43 @@ class Api {
                 audioContext.resume();
             }
     
-            // Fade-out antes de pausar el audio
-            fadeOut(3, () => {
-                audio.pause();
-                audio.currentTime = 0; // Reiniciar al inicio
-            });
+            if (!isFading) {
+                isFading = true;
     
-            // Deshabilitar botones correspondientes
-            stopButton.disabled = true;
-            playButton.disabled = false;
+                // Cancelar valores previos y ejecutar fade-out
+                fadeOut(3, () => {
+                    isFading = false;
+                    audio.pause();
+                    audio.currentTime = 0; // Reiniciar al inicio
+                });
+    
+                // Deshabilitar botones correspondientes
+                stopButton.disabled = true;
+                playButton.disabled = false;
+            }
         });
     
         // Función para el efecto de fade-in
-        function fadeIn(duration = 3) {
+        function fadeIn(duration = 3, callback) {
             const currentTime = audioContext.currentTime;
             gainNode.gain.cancelScheduledValues(currentTime); // Cancelar valores previos
+            gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime); // Configurar valor actual
             gainNode.gain.linearRampToValueAtTime(1, currentTime + duration); // Subir volumen a 1
+    
+            // Llamar al callback después del fade-in
+            setTimeout(() => {
+                if (callback) callback();
+            }, duration * 1000);
         }
     
         // Función para el efecto de fade-out
         function fadeOut(duration = 3, callback) {
             const currentTime = audioContext.currentTime;
             gainNode.gain.cancelScheduledValues(currentTime); // Cancelar valores previos
+            gainNode.gain.setValueAtTime(gainNode.gain.value, currentTime); // Configurar valor actual
             gainNode.gain.linearRampToValueAtTime(0, currentTime + duration); // Bajar volumen a 0
     
-            // Llamar al callback cuando termine el fade-out
+            // Llamar al callback después del fade-out
             setTimeout(() => {
                 if (callback) callback();
             }, duration * 1000);
@@ -95,7 +116,8 @@ class Api {
             playButton.disabled = true;
             stopButton.disabled = true;
         });
-    }    
+    }
+        
 
 }
 
