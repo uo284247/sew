@@ -1,0 +1,147 @@
+/* Estilos generales */
+
+main h2 {
+    width: 100%; 
+    text-align: center;
+    padding: 0.6rem; 
+}
+
+main button{
+    width: auto;
+    padding: 0.6rem 1rem;
+    margin: 0 50vh;
+    text-align: center;
+}
+
+section picture:first-of-type img {
+    border: 0.3rem solid green;
+}
+
+section picture:last-of-type img {
+    border: 0.3rem solid red;
+}
+
+main p{
+    width: 100%; 
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 2rem;
+}
+
+article:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0.12rem 0.12rem 0.3rem rgba(0, 0, 0, 0.5); /* Más prominente */
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 70vw;
+    margin: auto; 
+    padding: 1.25rem; 
+}
+
+section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f9f9f9;
+    color: black;
+    border: 0.0625em solid #ddd; 
+}
+
+section h3, section h4 {
+    margin-top: 0;
+    color: #850400;
+    background-color: #f9f9f9;
+}
+
+/* Estilos de las cartas */
+article {
+    width: 20%;
+    height: 10em; 
+    margin: 0.3rem;
+    transform: scale(1);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 0.06rem 0.06rem 0.06rem rgba(0, 0, 0, .3);
+}
+
+article[data-state="flip"] {
+    transform: rotateY(180deg);
+}
+
+article[data-state="revealed"] {
+    transform: rotateY(180deg);
+}
+
+article img {
+    transform: rotateY(180deg);
+    border: 0rem solid black;
+}
+
+article h3,
+article img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.3rem;
+    color: white;
+    background: #1C7CCC;
+    backface-visibility: hidden;
+}
+
+article h3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1080px) {
+    main {
+        width: 90vw; /* warning por redifinición */
+    }
+    article h3 {
+        font-size: 0.8rem; /* warning por redifinición */
+        width: 100%;  /* warning por redifinición */
+        text-align: center; 
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        width: 100%;  /* warning por redifinición */
+        margin: 0; /* warning por redifinición */
+        padding: 1rem;  /* warning por redifinición */
+    }
+    article {
+        width: 20%; /* warning por redifinición */
+        height: 8em; /* warning por redifinición */
+    }
+}
+
+@media (max-width: 670px) {
+    
+    main {
+        width: 100%; /* warning por redifinición */
+        margin: 0; /* warning por redifinición */
+        padding: 0.5rem; /* warning por redifinición */ 
+    }
+    article {
+        width: 20%; /* warning por redifinición */
+        height: 6em; /* warning por redifinición */
+    }
+    article h3 {
+        font-size: 0.7rem; /* warning por redifinición */
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

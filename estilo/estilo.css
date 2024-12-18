@@ -1,0 +1,225 @@
+/* Yeray Rodriguez Granda UO284247 */
+/* Para el cuerpo de la página, tipo de letra, color de fondo y color de letra */
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+h3{
+    color:#850400;
+    background-color: #fff;
+}
+
+header{
+    background-color: #850400; /* Color de fondo */
+    color: white;
+    border-bottom: 0.063rem solid #ddd;
+}
+
+/* El color de letra del menú */
+header nav a {
+    color: #FFFFFF;
+    background-color: #850400;
+    font-size: 1.125rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.313rem;
+}
+
+/* Especificidad 013*/
+header nav a:hover {
+    text-decoration: underline; /* Subrayar al pasar el ratón */
+    color: white;
+    background-color: #850400;
+}
+
+/* Estilo para el elemento activo del menú */
+/* Especificidad 013*/
+header nav a.active {
+    color: #FFD700; /* Color dorado para el elemento activo, destaca bien sobre el fondo oscuro */
+    background-color: #850400;
+    font-weight: bold; /* Resaltar el texto */
+    border-bottom: 0.125rem solid #FFD700; /* Añadir un borde inferior para mayor énfasis */
+}
+
+img {
+    border: 0.5rem solid #850400; /* Borde de 0.5rem */
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #850400;
+}
+
+header h1 a:hover {
+    background-color: #d9534f; 
+    color: #fff;
+}
+
+/* Estilo para los títulos principales (h1, h2) */
+h1, h2 {
+    color: #FFFFFF;
+    background-color: #850400;
+}
+
+section nav a {
+    text-decoration: none;
+    color: white;
+    background-color: #0749BB;
+}
+
+section nav a:hover {
+    background-color: #2575fc;
+    color: #fff;
+}
+
+/* Estilo de las listas de definición */
+dt {
+    font-size: 1.125rem;
+    padding: 0.313rem;
+}
+
+dt::before {
+    content: "⚙ ";
+}
+
+dd {
+    color: #000000;
+    background-color: #e0f7fa;
+    font-size: 1rem;
+    border-left: 0.188rem solid #850400;
+}
+
+/* Estilo de la tabla */
+table {
+    background-color: #f5f5f5;
+    color: #000000;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    border: 0.063rem solid #ddd;
+}
+
+td {
+    border: 0.063rem solid #ddd;
+}
+
+
+/* Enlaces dentro de listas */
+ul li a {
+    color: #000000;
+    background-color: #D9D9D9;
+    border-radius: 0.313rem;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: #D9D9D9;
+    color: red;
+}
+
+/* Hover para enlaces */
+p > a:hover,
+li > a:hover {
+    color: red;
+    background-color: white;
+    text-decoration: underline;
+}
+
+form {
+    background-color: #ffffff; 
+    border: 0.125rem solid #ddd; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+    color: #333; 
+    font-family: 'Arial', sans-serif; 
+}
+
+form h3 {
+    font-size: 1.5rem;
+    color: #555;
+    background-color:  #fff;
+    text-shadow: 0.05rem 0.05rem 0.15rem rgba(0, 0, 0, 0.1); 
+}
+
+form label {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666; 
+    background-color: #fff;
+}
+
+form input, form select {
+    font-size: 1rem;
+    border: 0.1rem solid #ccc; 
+    border-radius: 0.5rem; 
+    background-color: #f9f9f9; 
+    color: #333; 
+    box-shadow: inset 0 0.1rem 0.2rem rgba(0, 0, 0, 0.05); 
+}
+
+form input:focus, form select:focus {
+    border-color: #007bff; 
+    outline: none; 
+    box-shadow: 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+input[type="text"],
+input[type="file"] {
+    font-size: 1rem; 
+    border: 0.1rem solid #ccc; 
+    border-radius: 0.5rem; 
+    background-color: #f9f9f9; 
+    color: #333; 
+    box-shadow: inset 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1); 
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    border-color: #007bff; 
+    color: #000000;
+    box-shadow: 0 0 0.4rem rgba(0, 123, 255, 0.5);
+    background-color: #fff; 
+}
+
+input[type="text"]::placeholder,
+input[type="file"]::placeholder {
+    color: #aaa; 
+    background-color: #f9f9f9;
+    font-style: italic; 
+}
+
+button, input[type="button"] {
+    background: #0749BB; 
+    color: white; 
+    font-size: 1rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+button:disabled, input[type="button"]:disabled {
+    background: #ddd; 
+    color: #aaa; 
+}
+
+button:hover:not(:disabled), input[type="button"]:hover:not(:disabled) {
+    background-color: #2575fc;
+    color: white;
+    box-shadow: 0 0.6em 1.2em rgba(0, 0, 0, 0.3); 
+}
+
+button:active:not(:disabled), input[type="button"]:active:not(:disabled){
+    background-color: #063688; 
+    color: white;
+    box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.4);
+}
+
+div img {
+    border: 0rem solid black;
+}

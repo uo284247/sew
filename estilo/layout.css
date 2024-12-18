@@ -1,0 +1,226 @@
+/* layout.css */
+/* Estilos para el encabezado */
+/* Especificidad 001*/
+header {
+    padding: 1.25rem; /* Espaciado interno */
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h3, h4, h5, h6{
+    margin: 1%;
+}
+
+p, input{
+    margin: 1%;
+}
+
+section video{
+    margin: 1%;
+}
+
+
+/* Estilos para el título */
+/* Especificidad 002*/
+header h1 {
+    font-size: 2rem; /* Tamaño de la fuente */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilos para la navegación */
+/* Especificidad 002*/
+header nav {
+    display: flex; /* Usamos flexbox en nav para alinear los enlaces */
+    justify-content: center; /* Centrar los enlaces */
+    margin-top: 0.313rem; /* Espacio entre el h1 y el nav */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+}
+
+header h1 a {
+    padding: 0.5rem 1rem;
+}
+
+h1, h2 {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+section nav a {
+    padding: 0.625rem;
+    border-radius: 0.313rem;
+}
+
+dt {
+    font-size: 1.125rem;
+    padding: 0.313rem;
+}
+
+dd {
+    margin-left: 1.25rem;
+    padding: 0.313rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 50%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem ;
+    font-size: 1rem;
+    text-align: left;
+    padding: 3rem;
+}
+
+th {
+    padding: 0.625rem 0.938rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    padding: 0.625rem 0.938rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+ul li a {
+    display: inline-block;
+    margin-bottom: 0.625rem;
+    padding: 0.5rem;
+}
+
+form {
+    grid-column: 1 / -1; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    align-items: center;
+    padding: 2rem;
+    max-width: 25rem; 
+    width: 90%; 
+    margin: 2rem auto; 
+}
+
+form h3 {
+    margin: 0;
+    text-align: center; 
+}
+
+form label {
+    width: 100%;
+    margin-bottom: 0.3rem;
+}
+
+form input, form select, form button {
+    width: 100%;
+    max-width: 20rem; 
+    padding: 0.6rem;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%; 
+    max-width: 25rem; 
+    padding: 0.8rem; 
+}
+
+button, input[type="button"] {
+    padding: 0.4em 1.5em;
+}
+
+section > div{
+    width: 95%;
+    height: 80vh;
+    margin: 1%;
+}
+
+div button{
+    border-radius: 0rem;
+}
+
+/* Especificidad 003*/
+header nav a {
+    margin: 0 1rem; /* Espacio entre enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+section picture {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+  
+section > section {
+    text-align: center; 
+}
+    
+video {
+    max-width: 100%;  /* Asegura que el video no se desborde */
+    height: auto;     /* Mantiene la relación de aspecto */
+}
+
+svg{
+    margin: 1%;
+    width: 95%;
+}
+
+section nav {
+    margin: 1.5rem 0; 
+    padding: 1rem;
+}
+
+
+
+@media (max-width: 1100px){
+    header nav {
+        display: grid; /* warning por redifinición */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr); 
+        text-align: center; 
+        gap: 5% 3% ;
+    }
+
+}
+
+@media (max-width: 595px){
+    header nav {
+        display: flex; /* warning por redifinición */
+        flex-direction: column; 
+        height: auto;
+    }
+
+    header nav a{
+        width: auto; 
+        margin: auto; /* warning por redifinición */
+    }
+    form{
+        width: 80%; /* warning por redifinición */
+    }
+
+    input[type="text"], input[type="file"]{
+        width: 80%; /* warning por redifinición */
+    }
+
+    body > p{
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+    form {
+        width: 70%; /* warning por redifinición */
+    }
+    section > div {
+        width: 70%; /* warning por redifinición */
+        height: 40vh; /* warning por redifinición */
+    }
+}
+
+

@@ -1,0 +1,64 @@
+main {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 90%; 
+    background: #fff;
+    color:white;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    border-radius: 0.3125em; 
+}
+
+/* Sections */
+section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f9f9f9;
+    border: 0.0625em solid #ddd; 
+    border-radius: 0.25em; 
+}
+
+section h3, section h4 {
+    margin-top: 0;
+    color: #850400;
+    background-color: #f9f9f9;
+}
+
+section audio {
+    margin-top: 1rem;
+    width: 50%;
+    border: 0.0625em solid #ddd; 
+    border-radius: 0.25em; 
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 800px) { 
+    section audio {
+        width: 80%; /* warning por redifinición*/ 
+    }
+}
+
+
+@media (max-width: 600px) { 
+    section audio {
+        width: 90%; /* warning por redifinición*/  
+    }
+}
+
+@media (max-width: 475px) { 
+    section {
+        padding: 0;  /* warning por redifinición*/ 
+        background: #fff; /* warning por redifinición*/  
+        color: white;
+        border: none; /* warning por redifinición de border*/
+    }
+    
+    section audio {
+        width: 100%;  /* warning por redifinición*/ 
+        border: none;  /* warning por redifinición de border*/
+        box-shadow: none;  /* warning por redifinición*/ 
+    }
+
+    section h3, section h4 {
+        background-color: #fff; /* warning por redifinición*/   
+    }
+}
