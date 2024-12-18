@@ -119,8 +119,8 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #D9D9D9;
-    color: red;
+    background-color: #E6E6E6;
+    color: #063D9D;
 }
 
 /* Hover para enlaces */
