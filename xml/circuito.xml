@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuito SYSTEM "circuito.dtd">
+<circuito>
+    <nombre>Monza</nombre>
+    <longitud unidad="metros">5.793</longitud>
+    <anchura unidad="metros">12</anchura>
+    <fecha>2024-09-01</fecha>
+    <hora>15:00:00</hora>
+    <vueltas>53</vueltas>
+    <localidad>Monza</localidad>
+    <pais>Italia</pais>
+    <referencias>
+        <referencia>https://www.clarosports.com/motor/formula-1/gp-de-italia-f1-2024-en-vivo-horario-y-donde-ver-la-carrera-de-formula-1-en-monza-posiciones-y-parrilla-de-salida/</referencia>
+        <referencia>https://es.wikipedia.org/wiki/Monza</referencia>
+        <referencia>//www.f1-fansite.com/es/circuitos-f1/autodromo-nazionale-monza/</referencia>
+    </referencias>
+    <fotos>
+        <foto>monza_panoramica.jpg</foto>
+        <foto>monza_recta.jpg</foto>
+        <foto>monza_plano.jpg</foto>
+    </fotos>
+    <videos>
+        <video>monza_video.mp4</video>
+    </videos>
+    <coordenadas>
+        <longitud_coordenadas>9°15'52''E</longitud_coordenadas>
+        <latitud>45°37'08''N</latitud>
+        <altitud unidad="metros">184</altitud>
+    </coordenadas>
+    <tramos>
+        <tramo>
+            <distancia unidad="metros">621,3</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'54''E</longitud_coordenadas>
+                <latitud>45°37'28''N</latitud>
+                <altitud unidad="metros">187</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">41,25</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'56''E</longitud_coordenadas>
+                <latitud>45°37'28''N</latitud>
+                <altitud unidad="metros">187</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">22,69</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'56''E</longitud_coordenadas>
+                <latitud>45°37'29''N</latitud>
+                <altitud unidad="metros">187</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">132,48</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'55''E</longitud_coordenadas>
+                <latitud>45°37'33''N</latitud>
+                <altitud unidad="metros">188</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">96,18</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'57''E</longitud_coordenadas>
+                <latitud>45°37'42''N</latitud>
+                <altitud unidad="metros">189</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">108,64</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'00''E</longitud_coordenadas>
+                <latitud>45°37'45''N</latitud>
+                <altitud unidad="metros">189</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">117,14</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'05''E</longitud_coordenadas>
+                <latitud>45°37'46''N</latitud>
+                <altitud unidad="metros">190</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">89,87</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'09''E</longitud_coordenadas>
+                <latitud>45°37'47''N</latitud>
+                <altitud unidad="metros">190</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">422,79</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'28''E</longitud_coordenadas>
+                <latitud>45°37'48''N</latitud>
+                <altitud unidad="metros">191</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">46,52</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'29''E</longitud_coordenadas>
+                <latitud>45°37'50''N</latitud>
+                <altitud unidad="metros">191</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">59,19</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'32''E</longitud_coordenadas>
+                <latitud>45°37'50''N</latitud>
+                <altitud unidad="metros">191</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">262,66</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'44''E</longitud_coordenadas>
+                <latitud>45°37'53''N</latitud>
+                <altitud unidad="metros">190</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">48,26</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'46''E</longitud_coordenadas>
+                <latitud>45°37'52''N</latitud>
+                <altitud unidad="metros">189</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">45,03</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'47''E</longitud_coordenadas>
+                <latitud>45°37'51''N</latitud>
+                <altitud unidad="metros">189</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">257,27</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'48''E</longitud_coordenadas>
+                <latitud>45°37'43''N</latitud>
+                <altitud unidad="metros">188</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">29,83</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'48''E</longitud_coordenadas>
+                <latitud>45°37'42''N</latitud>
+                <altitud unidad="metros">188</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">365,32</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'33''E</longitud_coordenadas>
+                <latitud>45°37'36''N</latitud>
+                <altitud unidad="metros">188</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">84,2</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'30''E</longitud_coordenadas>
+                <latitud>45°37'34''N</latitud>
+                <altitud unidad="metros">188</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">610,85</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'09''E</longitud_coordenadas>
+                <latitud>45°37'21''N</latitud>
+                <altitud unidad="metros">186</altitud>
+            </coordenadas>
+            <sector>2</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">70,14</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'09''E</longitud_coordenadas>
+                <latitud>45°37'19''N</latitud>
+                <altitud unidad="metros">186</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">54,44</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'08''E</longitud_coordenadas>
+                <latitud>45°37'17''N</latitud>
+                <altitud unidad="metros">185</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">61,97</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'06''E</longitud_coordenadas>
+                <latitud>45°37'16''N</latitud>
+                <altitud unidad="metros">185</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">40,22</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'05''E</longitud_coordenadas>
+                <latitud>45°37'15''N</latitud>
+                <altitud unidad="metros">185</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">947,1</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'01''E</longitud_coordenadas>
+                <latitud>45°36'44''N</latitud>
+                <altitud unidad="metros">180</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">45,25</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°17'00''E</longitud_coordenadas>
+                <latitud>45°36'43''N</latitud>
+                <altitud unidad="metros">180</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">50,63</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'57''E</longitud_coordenadas>
+                <latitud>45°36'42''N</latitud>
+                <altitud unidad="metros">179</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">64,6</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'55''E</longitud_coordenadas>
+                <latitud>45°36'43''N</latitud>
+                <altitud unidad="metros">180</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">72,83</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'52''E</longitud_coordenadas>
+                <latitud>45°36'44''N</latitud>
+                <altitud unidad="metros">179</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">89,67</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'50''E</longitud_coordenadas>
+                <latitud>45°36'47''N</latitud>
+                <altitud unidad="metros">180</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">93,44</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'50''E</longitud_coordenadas>
+                <latitud>45°36'50''N</latitud>
+                <altitud unidad="metros">181</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">180,83</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'50''E</longitud_coordenadas>
+                <latitud>45°36'56''N</latitud>
+                <altitud unidad="metros">181</altitud>
+            </coordenadas>
+            <sector>3</sector>
+        </tramo>
+        <tramo>
+            <distancia unidad="metros">372,71</distancia>
+            <coordenadas>
+                <longitud_coordenadas>9°16'52''E</longitud_coordenadas>
+                <latitud>45°37'08''N</latitud>
+                <altitud unidad="metros">184</altitud>
+            </coordenadas>
+            <sector>1</sector>
+        </tramo>     
+    </tramos>
+</circuito>
