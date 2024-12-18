@@ -1,0 +1,42 @@
+﻿--- carreras ---
+carrera_id,nombre,fecha,circuito_id
+"1,""Gran Premio de Bélgica"",2023-08-27,1"
+"2,""Gran Premio de Italia"",2023-09-03,2"
+"3,""Gran Premio de Gran Bretaña"",2023-07-16,3"
+"4,""Gran Premio de Brasil"",2023-11-05,4"
+
+--- circuitos ---
+circuito_id,nombre,localizacion
+"1,Spa-Francorchamps,""Bélgica """
+"2,Monza,""Italia """
+"3,Silverstone,""Reino Unido """
+"4,Interlagos,""Brasil """
+
+--- equipos ---
+equipo_id,nombre,pais
+"1,""Red Bull Racing"",""Austria """
+"2,Mercedes,""Reino Unido """
+"3,Ferrari,""Italia """
+"4,McLaren,""Reino Unido """
+
+--- pilotos ---
+piloto_id,nombre,apellido,fecha_nacimiento,equipo_id
+1,Max,Verstappen,1997-09-30,1
+2,Lewis,Hamilton,1985-01-07,2
+3,Charles,Leclerc,1997-10-16,3
+4,Lando,Norris,1999-11-13,4
+
+--- resultados ---
+resulto_id,carrera_id,piloto_id,posicion,puntos
+1,1,1,1,25
+2,1,2,2,18
+3,1,3,3,15
+4,2,3,1,25
+5,2,1,2,18
+6,2,4,3,15
+7,3,2,1,25
+8,3,1,2,18
+9,3,4,3,15
+10,4,1,1,25
+11,4,3,2,18
+12,4,2,3,15
