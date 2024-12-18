@@ -50,8 +50,8 @@
 		
 		<h3>Subir noticia</h3>
 		<form>
-			<label>Sube un archivo con tus noticas</label>
-			<input type="file" onchange="noticia.readInputFile(this.files);" title="Seleccione un archivo para subir"/>	
+			<label for="noticas">Sube un archivo con tus noticas</label>
+			<input type="file" id="noticas" onchange="noticia.readInputFile(this.files);" title="Seleccione un archivo para subir"/>	
 		</form>
 	</main>
 	<script src="./js/noticias.js"></script>

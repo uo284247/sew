@@ -37,22 +37,22 @@
 	<section>
 		<h3>Sube archivos Kml</h3>
 		<form>
-			<label>Sube un kml para verlo en el mapa;</label>
-			<input type="file" onchange="circuito.planimetria(this.files);" title="Subir archivo KML">
+			<label for="kml">Sube un kml para verlo en el mapa;</label>
+			<input type="file" id="kml" onchange="circuito.planimetria(this.files);" title="Subir archivo KML">
 		</form>
 	</section>
 	<section>
 		<h3>Sube archivos SVG</h3>
 		<form>
-			<label>Sube un .svg para visualizarlo:</label>
-			<input type="file" onchange="circuito.svg(this.files);" title="Subir archivo SVG" >
+			<label for="svg">Sube un .svg para visualizarlo:</label>
+			<input type="file" id="svg" onchange="circuito.svg(this.files);" title="Subir archivo SVG" >
 		</form>
 	</section>
 	<section>
 		<h3>Sube archivo xml</h3>
 		<form>
-			<label>Sube un xml para visualizarlo:</label>
-			<input type="file" onchange="circuito.leerArhivo(this.files);" title="Subir archivo XML">
+			<label for="xml">Sube un xml para visualizarlo:</label>
+			<input type="file" id="xml" onchange="circuito.leerArhivo(this.files);" title="Subir archivo XML">
 		</form>
 	</section>
 </body>
