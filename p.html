@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="es"><head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yeray Rodriguez Granda">
+    <meta name="description" content="Base de datos F1">
+    <meta name="keywords" content="Equipos, pilotos, carreras, resultados, circuitos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo</title>
+    <link rel="stylesheet" type="text/css" href="./estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="./estilo/layout.css">
+    <link rel="icon" href="./multimedia/imagenes/icon.ico">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">F1 Desktop</a></h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../piloto.html">Piloto</a>
+            <a href="../noticias.html">Noticias</a>
+            <a href="../calendario.html">Calendario</a>
+            <a href="../meteorologia.html">Meteorología</a>
+            <a href="../circuito.html">Circuito</a>
+            <a href="../viajes.php">Viajes</a>
+            <a href="../juegos.html" class="active">Juegos</a>
+        </nav>
+    </header>
+    <p>Estás en: <a href="../index.html">Inicio</a> &gt;&gt; <a href="../juegos.html">Juegos</a> &gt;&gt; PHP</p>
+    <section>
+		<h3>Menú de Juegos de F1</h3>
+        <nav>
+            <a href="../memoria.html">Memoria</a>
+            <a href="../semaforo.php">Semáforo</a>
+			<a href="../api.html">API</a>
+			<a href="principal.php">PHP</a>
+        </nav>
+	</section>
+    <section>
+        <h2>Base da datos de Fórmula 1</h2>
+
+        <h3>Creación de la base de datos</h3>
+        <form method="POST">
+            <button type="submit" name="create_db">Crear Base de Datos y Tablas</button>
+        </form>
+    
+        <p></p><h4>Tablas y Atributos de la Base de Datos creada</h4><table><tbody><tr><th scope="col" id="tabla">Tabla</th><th scope="col" id="columnas">Columnas</th></tr><tr><th scope="row" id="carreras">carreras</th><td headers="carreras columnas">carrera_id int(11), nombre varchar(255), fecha date, circuito_id int(11)</td></tr><tr><th scope="row" id="circuitos">circuitos</th><td headers="circuitos columnas">circuito_id int(11), nombre varchar(255), localizacion varchar(255)</td></tr><tr><th scope="row" id="equipos">equipos</th><td headers="equipos columnas">equipo_id int(11), nombre varchar(255), pais varchar(100)</td></tr><tr><th scope="row" id="pilotos">pilotos</th><td headers="pilotos columnas">piloto_id int(11), nombre varchar(100), apellido varchar(100), fecha_nacimiento date, equipo_id int(11)</td></tr><tr><th scope="row" id="resultados">resultados</th><td headers="resultados columnas">resultado_id int(11), carrera_id int(11), piloto_id int(11), posicion int(11), puntos int(11)</td></tr></tbody></table><p></p>
+        <h3>Importar CSV</h3>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="csv_equipos">CSV para los equipos:</label>
+            <input type="file" name="csv_equipos" id="csv_equipos" accept=".csv" required="">
+            <label for="csv_pilotos">CSV para los pilotos:</label>
+            <input type="file" name="csv_pilotos" id="csv_pilotos" accept=".csv" required="">
+            <label for="csv_circuitos">CSV para los circuitos:</label>
+            <input type="file" name="csv_circuitos" id="csv_circuitos" accept=".csv" required="">
+            <label for="csv_carreras">CSV para las carreras:</label>
+            <input type="file" name="csv_carreras" id="csv_carreras" accept=".csv" required="">
+            <label for="csv_resultados">CSV para los resultados:</label>
+            <input type="file" name="csv_resultados" id="csv_resultados" accept=".csv" required="">
+            <button type="submit" name="import_csv">Importar CSV</button>
+        </form>
+
+        
+        <h3>Exportar CSV</h3>
+        <form method="POST">
+            <button type="submit" name="export_csv">Exportar Datos a CSV</button>
+        </form>
+
+            </section> 
+
+
+</body></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+	<meta name ="author" content ="Yeray Rodriguez Granda" /> 
+	<meta name ="description" content ="Diferentes noticias relacionadas con el mundo de la formula 1" /> 
+	<meta name ="keywords" content ="F1, accidente, ganador, fallo" />
+	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" /> 
+    <title>F1Desktop</title>
+	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" /> 
+	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+	<link rel="stylesheet" type="text/css" href="estilo/article_element.css" /> 
+	<link rel="icon" href="multimedia/imagenes/icon.ico" />
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>
+		<h1><a href="index.html">F1 Desktop</a></h1>
+		<nav>
+			<a href="index.html">Inicio</a>
+			<a href="piloto.html">Piloto</a>
+			<a href="noticias.html" class="active">Noticias</a>
+			<a href="calendario.html">Calendario</a>
+			<a href="meteorologia.html">Meteorología</a>
+			<a href="circuito.html">Circuito</a>
+			<a href="viajes.php">Viajes</a>
+			<a href="juegos.html">Juegos</a>
+		</nav>
+	</header>
+	<p>Estás en: <a href="index.html">Inicio</a> >> Noticia</p>
+	<h2>Noticias</h2>
+    <main>
+		<h3>Crear noticia</h3>
+		<form >
+			<label for="titulo">Título:</label>
+			<input type="text" id="titulo" name="titulo" placeholder="Introduce el título de la noticia" required/>
+	
+			<label for="entradilla">Entradilla:</label>
+			<input type="text" id="entradilla" name="entradilla" placeholder="Introduce la entradilla de la noticia" required/>
+		
+			<label for="autor">Autor:</label>
+			<input type="text" id="autor" name="autor" placeholder="Introduce el autor de la noticia" required/>
+		
+			<button type="submit">Añadir Noticia</button>
+		</form>
+		
+		<h3>Subir noticia</h3>
+		<input type="file" onchange="noticia.readInputFile(this.files);" title="Seleccione un archivo para subir"/>	
+	</main>
+	<script src="./js/noticias.js"></script>
+		<section>
+			<h3>Noticias disponibles</h3>
+		</section>
+</body>
+</html>

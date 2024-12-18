@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+	<meta name ="author" content ="Yeray Rodriguez Granda" /> 
+	<meta name ="description" content ="Información sobre los diferentes circuitos de F1" /> 
+	<meta name ="keywords" content ="F1, circuito, Mónaco, Monte Carlo, Montmeló, Silverstone, Monza, Las Vegas, Miami" />
+	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" /> 
+    <title>Circuito</title>
+	<link rel="stylesheet" type="text/css" href="estilo/estilo.css" /> 
+	<link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+	<link rel="icon" href="multimedia/imagenes/icon.ico" />
+	<script src="./js/circuito.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&amp;"></script>
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>
+		<h1><a href="index.html">F1 Desktop</a></h1>
+		<nav>
+			<a href="index.html">Inicio</a>
+			<a href="piloto.html">Piloto</a>
+			<a href="noticias.html">Noticias</a>
+			<a href="calendario.html">Calendario</a>
+			<a href="meteorologia.html">Meteorología</a>
+			<a href="circuito.html" class="active">Circuito</a>
+			<a href="viajes.php">Viajes</a>
+			<a href="juegos.html">Juegos</a>
+		</nav>
+	</header>
+	<p>Estás en: <a href="index.html">Inicio</a> >> Circuito</p>
+	<h2>Monza</h2>
+	<section>
+		<h3>Sube archivos Kml</h3>
+		<input type="file" onchange="circuito.planimetria(this.files);" title="Subir archivo KML">
+	</section>
+	<section>
+		<h3>Sube archivos SVG</h3>
+		<input type="file" onchange="circuito.svg(this.files);" title="Subir archivo SVG" >
+	</section>
+	<section>
+		<h3>Sube archivo xml</h3>
+		<input type="file" onchange="circuito.leerArhivo(this.files);" title="Subir archivo XML">
+	</section>
+</body>
+</html>
