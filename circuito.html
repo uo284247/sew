@@ -36,15 +36,24 @@
 	<h2>Monza</h2>
 	<section>
 		<h3>Sube archivos Kml</h3>
-		<input type="file" onchange="circuito.planimetria(this.files);" title="Subir archivo KML">
+		<form>
+			<label>Sube un kml para verlo en el mapa;</label>
+			<input type="file" onchange="circuito.planimetria(this.files);" title="Subir archivo KML">
+		</form>
 	</section>
 	<section>
 		<h3>Sube archivos SVG</h3>
-		<input type="file" onchange="circuito.svg(this.files);" title="Subir archivo SVG" >
+		<form>
+			<label>Sube un .svg para visualizarlo:</label>
+			<input type="file" onchange="circuito.svg(this.files);" title="Subir archivo SVG" >
+		</form>
 	</section>
 	<section>
 		<h3>Sube archivo xml</h3>
-		<input type="file" onchange="circuito.leerArhivo(this.files);" title="Subir archivo XML">
+		<form>
+			<label>Sube un xml para visualizarlo:</label>
+			<input type="file" onchange="circuito.leerArhivo(this.files);" title="Subir archivo XML">
+		</form>
 	</section>
 </body>
 </html>
