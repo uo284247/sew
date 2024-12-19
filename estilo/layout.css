@@ -219,7 +219,7 @@ section nav {
     }
     section > div {
         width: 70%; /* warning por redifinición */
-        height: 40vh; /* warning por redifinición */
+        height: 35vh; /* warning por redifinición */
     }
 }
 

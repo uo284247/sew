@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" type="text/css" href="estilo/semaforo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
-    <link rel="icon" href="../multimedia/imagenes/icon.ico" />
+    <link rel="icon" href="multimedia/imagenes/icon.ico" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -97,6 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </nav>
     </header>
     <p>Estás en: <a href="index.html">Inicio</a> >> <a href="juegos.html">Juegos</a> >> Semáforo</p>
+    <h2>Simulador de semáforo</h2>
     <section>
 		<h3>Menú de Juegos de F1</h3>
         <nav>
@@ -107,8 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </nav>
 	</section>
     <main>
-        <!-- Aquí podría estar el formulario u otros elementos -->
     </main>
-    <script src="./js/semaforo.js"></script>
+    <script src="js/semaforo.js"></script>
 </body>
 </html>
